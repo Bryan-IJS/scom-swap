@@ -710,7 +710,7 @@ const AmmTradeExactIn = async function (state: State, wallet: any, market: strin
         value: amount
       }
     }
-    if (campaignId !== undefined) {
+    if (campaignId !== undefined && campaignId !== null) {
       let txData = await getRouterSwapTxData(wallet.chainId, market, executeSwapOptions);
       const proxyAddress = state.getProxyAddress();
       const proxy = new ProxyContracts.ProxyV3(wallet, proxyAddress);
@@ -750,7 +750,7 @@ const AmmTradeExactIn = async function (state: State, wallet: any, market: strin
       tokenInType: 'ERC20',
       tokenOutType: !tokenOut.address ? 'ETH' : 'ERC20'
     }
-    if (campaignId !== undefined) {
+    if (campaignId !== undefined && campaignId !== null) {
       let txData = await getRouterSwapTxData(wallet.chainId, market, executeSwapOptions);
       const proxyAddress = state.getProxyAddress();
       const proxy = new ProxyContracts.ProxyV3(wallet, proxyAddress);
@@ -812,7 +812,7 @@ const AmmTradeExactOut = async function (state: State, wallet: any, market: stri
         value: _amountInMax
       }
     }
-    if (campaignId !== undefined) {
+    if (campaignId !== undefined && campaignId !== null) {
       let txData = await getRouterSwapTxData(wallet.chainId, market, executeSwapOptions);
       const proxyAddress = state.getProxyAddress();
       const proxy = new ProxyContracts.ProxyV3(wallet, proxyAddress);
@@ -852,7 +852,7 @@ const AmmTradeExactOut = async function (state: State, wallet: any, market: stri
       tokenOutType: !tokenOut.address ? 'ETH' : 'ERC20'
     }
 
-    if (campaignId !== undefined) {
+    if (campaignId !== undefined && campaignId !== null) {
       let txData = await getRouterSwapTxData(wallet.chainId, market, executeSwapOptions);
       const proxyAddress = state.getProxyAddress();
       const proxy = new ProxyContracts.ProxyV3(wallet, proxyAddress);

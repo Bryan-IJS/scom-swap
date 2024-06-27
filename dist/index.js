@@ -1940,7 +1940,7 @@ define("@scom/scom-swap/swap-utils/index.ts", ["require", "exports", "@ijstech/e
                     value: amount
                 }
             };
-            if (campaignId !== undefined) {
+            if (campaignId !== undefined && campaignId !== null) {
                 let txData = await (0, scom_dex_list_1.getRouterSwapTxData)(wallet.chainId, market, executeSwapOptions);
                 const proxyAddress = state.getProxyAddress();
                 const proxy = new scom_commission_proxy_contract_1.Contracts.ProxyV3(wallet, proxyAddress);
@@ -1980,7 +1980,7 @@ define("@scom/scom-swap/swap-utils/index.ts", ["require", "exports", "@ijstech/e
                 tokenInType: 'ERC20',
                 tokenOutType: !tokenOut.address ? 'ETH' : 'ERC20'
             };
-            if (campaignId !== undefined) {
+            if (campaignId !== undefined && campaignId !== null) {
                 let txData = await (0, scom_dex_list_1.getRouterSwapTxData)(wallet.chainId, market, executeSwapOptions);
                 const proxyAddress = state.getProxyAddress();
                 const proxy = new scom_commission_proxy_contract_1.Contracts.ProxyV3(wallet, proxyAddress);
@@ -2040,7 +2040,7 @@ define("@scom/scom-swap/swap-utils/index.ts", ["require", "exports", "@ijstech/e
                     value: _amountInMax
                 }
             };
-            if (campaignId !== undefined) {
+            if (campaignId !== undefined && campaignId !== null) {
                 let txData = await (0, scom_dex_list_1.getRouterSwapTxData)(wallet.chainId, market, executeSwapOptions);
                 const proxyAddress = state.getProxyAddress();
                 const proxy = new scom_commission_proxy_contract_1.Contracts.ProxyV3(wallet, proxyAddress);
@@ -2080,7 +2080,7 @@ define("@scom/scom-swap/swap-utils/index.ts", ["require", "exports", "@ijstech/e
                 tokenInType: 'ERC20',
                 tokenOutType: !tokenOut.address ? 'ETH' : 'ERC20'
             };
-            if (campaignId !== undefined) {
+            if (campaignId !== undefined && campaignId !== null) {
                 let txData = await (0, scom_dex_list_1.getRouterSwapTxData)(wallet.chainId, market, executeSwapOptions);
                 const proxyAddress = state.getProxyAddress();
                 const proxy = new scom_commission_proxy_contract_1.Contracts.ProxyV3(wallet, proxyAddress);
